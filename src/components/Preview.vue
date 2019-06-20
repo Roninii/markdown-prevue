@@ -3,13 +3,23 @@
     width = '45vw'
     class=" pa-3 mt-3 elevation-5"
   )
-    v-card-title Preview
-    v-card-text
+    v-card-title
+     h2 Prevue
+    v-divider
+    v-card-text(v-html="preview")
   
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Preview",
+  props: {
+    preview: {
+      type: String,
+      default: ""
+    }
+  }
+};
 </script>
 
 <style scoped>
